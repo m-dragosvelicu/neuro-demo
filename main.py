@@ -16,13 +16,13 @@ model = load_model()
 st.title("🧠 AI Language Visualizer (Demo)")
 # Language selector
 lang_display = st.radio(
-    "Choose language for transcription:",
-    ("English", "Romana"),
+    "Alege limba:",
+    ("English"), # , "Romana"),
     horizontal=True,
     index=0,
 )
 lang_code = "en" if lang_display == "English" else "ro"
-st.write("Say something into your mic. Watch how the model breaks it into tokens live!")
+st.write("Spune ceva in microfon. Vezi cum este spart in tokens!")
 
 # Step 1: Record audio
 audio_bytes = audio_recorder()
